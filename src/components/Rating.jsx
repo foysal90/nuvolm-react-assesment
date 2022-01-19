@@ -1,10 +1,23 @@
 import React from "react";
+import StarOnImage from "../images/star-on.svg";
+import StarOffImage from "../images/star-off.svg";
 
-const Rating = ({ rate }) => {
+const Rating = ({ rating }) => {
+  const showStars = (rate) => {
+    let output = [];
+    for (let i = 1; i <= 5; i++) {
+      if (Math.round(rate) >= i) {
+        output.push(<img key={i} src={StarOnImage} />);
+      } else {
+        output.push(<img key={i} src={StarOffImage} />);
+      }
+    }
+    return output;
+  };
   return (
-    <div className="card">
-      <img className="card__image" src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" />
-      <div className="card__title">Mens Casual Slim Fit</div>
+    <div className="product-detail__rating">
+      {showStars(rating.rate)}
+      <div className="product-detail__rating__count">({rating.count})</div>
     </div>
   );
 };

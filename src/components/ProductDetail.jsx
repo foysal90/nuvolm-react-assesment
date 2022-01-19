@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Rating from "./Rating";
 
-const ProductDetail = () => {
-  
+const ProductDetail = ({ product, selectedProductId }) => {
+  const [productClassName, setProductClassName] = useState("");
+  useEffect(() => {
+    if (product.id == selectedProductId) {
+      setProductClassName("product-detail");
+    } else {
+      setProductClassName("product-detail product-hide");
+    }
+  }, [selectedProductId]);
+
   return (
-    <div className="product-detail">
-      <div className="product-detail__price">$9.99</div>
-      <div className="product-detail__description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officiis, placeat, molestiae vero fugiat ullam quaerat amet quisquam magnam
-        cupiditate nulla commodi expedita? Necessitatibus corrupti labore et iusto porro architecto.
-      </div>
-      <div className="product-detail__rating" ></div>
+    <div className={productClassName}>
+      <div className="product-detail__price">${product.price}</div>
+      <div className="product-detail__description">{product.description}</div>
+      <Rating key={product.id} rating={product.rating} />
     </div>
   );
 };
