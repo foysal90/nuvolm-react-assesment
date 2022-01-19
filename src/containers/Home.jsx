@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../components/Heading";
 import Card from "../components/Card";
+import ProductDetail from "../components/ProductDetail";
 
 const Home = () => {
   return (
