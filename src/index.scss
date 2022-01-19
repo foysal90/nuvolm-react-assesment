@@ -1,0 +1,52 @@
+body {
+  background-color: #e5e5e4;
+  font-family: "Roboto", sans-serif;
+
+  .heading {
+    text-align: center;
+    width: 40%;
+    max-width: 400px;
+    margin: 30px auto;
+
+    h1 {
+      font-weight: 400;
+      font-size: 50px;
+    }
+  }
+
+  .main {
+    display: flex;
+    width: 80%;
+    max-width: 750px;
+    margin: 100px auto;
+
+    .card-list {
+      width: 45%;
+      margin-right: 5%;
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        &__image {
+          width: 30%;
+        }
+        &__title {
+          width: 57%;
+          padding: 10px;
+          align-items: center;
+        }
+        &__arrow {
+          width: 13%;
+        }
+      }
+    }
+
+    .product-details {
+      width: 50%;
+      background-color: #fff;
+      padding: 30px;
+      min-height: 400px;
+    }
+  }
+}
