@@ -1,13 +1,13 @@
 ## Live Demo
 
-**This App uses a Netflify free plan, so I am afraid that it takes time to load the pages.**
+**This App uses a Heroku free plan, so I am afraid that it takes time to load the pages for the first time to wake the server up.**
 
-Check out [LIVE DEMO](https://friendly-sinoussi-4d218a.netlify.app/) here!!
+Check out [LIVE DEMO](https://techis-assess-web-react-nuvo.herokuapp.com/) here!!
 
 ## Tech used
 
 ```
-* Used Technologies : Html, SCSS, React
+* Used Technologies : React, SCSS, HTML
 ```
 
 ## How to Install
@@ -22,7 +22,6 @@ git clone git@github.com:https://github.com/Tech-i-s/techis-assess-web-react-nuv
 3. Application setting
 
 ```
-cd frontend
 npm install
 npm start
 # Open http://127.0.0.1:3000/
