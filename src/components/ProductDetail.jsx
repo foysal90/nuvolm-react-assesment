@@ -16,6 +16,7 @@ const ProductDetail = ({ product, selectedProductId }) => {
       <div className="product-detail__price">${product.price}</div>
       <div className="product-detail__description">{product.description}</div>
       <Rating key={product.id} rating={product.rating} />
+      <button className="product-detail__add-card">Add to Card</button>
     </div>
   );
 };

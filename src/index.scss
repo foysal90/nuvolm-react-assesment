@@ -53,6 +53,9 @@ body {
       }
 
       .product-detail {
+        height: 100%;
+        position: relative;
+
         &__price {
           font-size: 30px;
           margin-bottom: 20px;
@@ -73,6 +76,17 @@ body {
             font-size: 12px;
           }
         }
+        &__add-card {
+          display: block;
+          padding: 12px 20px;
+          width: 120px;
+          margin: 0 auto;
+          margin-top: 400px;
+          color: #fff;
+          background-color: #3f96b0;
+          border-radius: 5px;
+          border: 0;
+        }
       }
     }
   }
@@ -85,12 +99,32 @@ body {
     }
     .main {
       display: block;
+      margin: 50px auto;
+
       .card-list {
         width: 100%;
+        margin-bottom: 380px;
       }
       .product-details {
-        width: 80%;
-        padding: 10%;
+        position: fixed;
+        bottom: 0%;
+        left: 0;
+        padding: 5%;
+        width: 90%;
+        min-height: 100px;
+
+        .product-detail {
+          &__price {
+            font-size: 25px;
+            margin-bottom: 15px;
+          }
+          &__description {
+            margin-bottom: 15px;
+          }
+          &__add-card {
+            margin-top: 15px;
+          }
+        }
       }
     }
   }
